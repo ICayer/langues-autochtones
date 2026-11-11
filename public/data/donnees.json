@@ -1,0 +1,730 @@
+{
+  "nations": [
+    {
+      "id_nation": 1,
+      "nation": "W8banaki",
+      "langue": "Aln8ba8dwaw8gan",
+      "bonjour_salut": "Kwaï",
+      "merci": "WliWni",
+      "population_nation": 3955,
+      "nb_communautes": 2,
+      "communautes": [
+        {
+          "id_communaute": 36,
+          "id_nation": 1,
+          "nation": "W8banaki",
+          "nom_communaute": "Wôlinak",
+          "autre_appellation": "",
+          "longitude": -72.421489,
+          "latitude": 46.328232,
+          "population_communaute": 746,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 37,
+          "id_nation": 1,
+          "nation": "W8banaki",
+          "nom_communaute": "Odanak",
+          "autre_appellation": "",
+          "longitude": -72.822018,
+          "latitude": 46.072873,
+          "population_communaute": 3209,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 2,
+      "nation": "Anishnabe",
+      "langue": "Anishinaabemowin",
+      "bonjour_salut": "Kwe",
+      "merci": "Migwetc",
+      "population_nation": 14918,
+      "nb_communautes": 9,
+      "communautes": [
+        {
+          "id_communaute": 24,
+          "id_nation": 2,
+          "nation": "Anishnabe",
+          "nom_communaute": "Pikogan",
+          "autre_appellation": "",
+          "longitude": -78.117171,
+          "latitude": 48.597785,
+          "population_communaute": 1105,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 25,
+          "id_nation": 2,
+          "nation": "Anishnabe",
+          "nom_communaute": "Simosagahiganak",
+          "autre_appellation": "Lac Simon",
+          "longitude": -77.354736,
+          "latitude": 48.060873,
+          "population_communaute": 2378,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 26,
+          "id_nation": 2,
+          "nation": "Anishnabe",
+          "nom_communaute": "Timiskaming",
+          "autre_appellation": "",
+          "longitude": -78.627777,
+          "latitude": 48.035856,
+          "population_communaute": 3140,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 27,
+          "id_nation": 2,
+          "nation": "Anishnabe",
+          "nom_communaute": "Long Point",
+          "autre_appellation": "Winneway",
+          "longitude": -78.576965,
+          "latitude": 47.580231,
+          "population_communaute": 981,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 28,
+          "id_nation": 2,
+          "nation": "Anishnabe",
+          "nom_communaute": "Kitcisakik",
+          "autre_appellation": "",
+          "longitude": -77.458903,
+          "latitude": 47.539434,
+          "population_communaute": 560,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 29,
+          "id_nation": 2,
+          "nation": "Anishnabe",
+          "nom_communaute": "Wolf Lake",
+          "autre_appellation": "Hunter’s point",
+          "longitude": -78.793259,
+          "latitude": 47.00648,
+          "population_communaute": 302,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 30,
+          "id_nation": 2,
+          "nation": "Anishnabe",
+          "nom_communaute": "Eagle Village Kipawa",
+          "autre_appellation": "Kebaowek",
+          "longitude": -78.986292,
+          "latitude": 46.781196,
+          "population_communaute": 1297,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 31,
+          "id_nation": 2,
+          "nation": "Anishnabe",
+          "nom_communaute": "Barrière Lake",
+          "autre_appellation": "Lac Rapide",
+          "longitude": -76.700508,
+          "latitude": 47.503254,
+          "population_communaute": 809,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 32,
+          "id_nation": 2,
+          "nation": "Anishnabe",
+          "nom_communaute": "Kitigan Zibi",
+          "autre_appellation": "",
+          "longitude": -76.006379,
+          "latitude": 46.361145,
+          "population_communaute": 4346,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 3,
+      "nation": "Atikamekw",
+      "langue": "Atikamekw",
+      "bonjour_salut": "Kwei",
+      "merci": "Mikwetc",
+      "population_nation": 8547,
+      "nb_communautes": 3,
+      "communautes": [
+        {
+          "id_communaute": 39,
+          "id_nation": 3,
+          "nation": "Atikamekw",
+          "nom_communaute": "Opitciwan",
+          "autre_appellation": "",
+          "longitude": -74.938431,
+          "latitude": 48.661036,
+          "population_communaute": 3214,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 40,
+          "id_nation": 3,
+          "nation": "Atikamekw",
+          "nom_communaute": "Wemotaci",
+          "autre_appellation": "",
+          "longitude": -73.785102,
+          "latitude": 47.902692,
+          "population_communaute": 2155,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 41,
+          "id_nation": 3,
+          "nation": "Atikamekw",
+          "nom_communaute": "Manawan",
+          "autre_appellation": "",
+          "longitude": -74.387634,
+          "latitude": 47.22155,
+          "population_communaute": 3178,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 4,
+      "nation": "Innue",
+      "langue": "Innu-aimun",
+      "bonjour_salut": "Kuei",
+      "merci": "Tshinashkumitin",
+      "population_nation": 28012,
+      "nb_communautes": 9,
+      "communautes": [
+        {
+          "id_communaute": 46,
+          "id_nation": 4,
+          "nation": "Innue",
+          "nom_communaute": "Ekuanitshit",
+          "autre_appellation": "",
+          "longitude": -64.023128,
+          "latitude": 50.291478,
+          "population_communaute": 734,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 47,
+          "id_nation": 4,
+          "nation": "Innue",
+          "nom_communaute": "Uashat mak Mani-utenam",
+          "autre_appellation": "",
+          "longitude": -66.194687,
+          "latitude": 50.212765,
+          "population_communaute": 5211,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 48,
+          "id_nation": 4,
+          "nation": "Innue",
+          "nom_communaute": "Nutashkuan",
+          "autre_appellation": "",
+          "longitude": -61.803516,
+          "latitude": 50.132545,
+          "population_communaute": 1282,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 49,
+          "id_nation": 4,
+          "nation": "Innue",
+          "nom_communaute": "Unaman-shipit",
+          "autre_appellation": "",
+          "longitude": -60.660882,
+          "latitude": 50.219424,
+          "population_communaute": 1288,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 50,
+          "id_nation": 4,
+          "nation": "Innue",
+          "nom_communaute": "Pakuashipi",
+          "autre_appellation": "",
+          "longitude": -58.668365,
+          "latitude": 51.219357,
+          "population_communaute": 422,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 51,
+          "id_nation": 4,
+          "nation": "Innue",
+          "nom_communaute": "Pessamit",
+          "autre_appellation": "",
+          "longitude": -68.639832,
+          "latitude": 48.9437,
+          "population_communaute": 4283,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 52,
+          "id_nation": 4,
+          "nation": "Innue",
+          "nom_communaute": "Essipit",
+          "autre_appellation": "",
+          "longitude": -69.397019,
+          "latitude": 48.341072,
+          "population_communaute": 1354,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 53,
+          "id_nation": 4,
+          "nation": "Innue",
+          "nom_communaute": "Mashteuiatsh",
+          "autre_appellation": "",
+          "longitude": -72.230816,
+          "latitude": 48.576777,
+          "population_communaute": 12351,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 54,
+          "id_nation": 4,
+          "nation": "Innue",
+          "nom_communaute": "Matimekush",
+          "autre_appellation": "Lac John",
+          "longitude": -66.784232,
+          "latitude": 54.813169,
+          "population_communaute": 1087,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 5,
+      "nation": "Inuit",
+      "langue": "Inuktitut",
+      "bonjour_salut": "Ai",
+      "merci": "Nakurmiik",
+      "population_nation": 14378,
+      "nb_communautes": 14,
+      "communautes": [
+        {
+          "id_communaute": 1,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Ivujivik",
+          "autre_appellation": "",
+          "longitude": -77.908859,
+          "latitude": 62.412001,
+          "population_communaute": 451,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 2,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Salluit",
+          "autre_appellation": "",
+          "longitude": -75.640869,
+          "latitude": 62.196265,
+          "population_communaute": 1834,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 3,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Akulivik",
+          "autre_appellation": "",
+          "longitude": -78.190727,
+          "latitude": 60.80893,
+          "population_communaute": 714,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 4,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Puvirnituq",
+          "autre_appellation": "",
+          "longitude": -77.266846,
+          "latitude": 60.038789,
+          "population_communaute": 1905,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 5,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Inukjuak",
+          "autre_appellation": "",
+          "longitude": -78.111763,
+          "latitude": 58.453481,
+          "population_communaute": 2084,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 6,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Umiujaq",
+          "autre_appellation": "",
+          "longitude": -76.545181,
+          "latitude": 56.552292,
+          "population_communaute": 553,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 7,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Kuujjuaarapik",
+          "autre_appellation": "",
+          "longitude": -77.755222,
+          "latitude": 55.285568,
+          "population_communaute": 787,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 8,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Kangiqsujuaq",
+          "autre_appellation": "",
+          "longitude": -71.952209,
+          "latitude": 61.600518,
+          "population_communaute": 926,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 9,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Quaqtaq",
+          "autre_appellation": "",
+          "longitude": -69.622936,
+          "latitude": 61.042498,
+          "population_communaute": 463,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 10,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Kangirsuk",
+          "autre_appellation": "",
+          "longitude": -70.013466,
+          "latitude": 60.026013,
+          "population_communaute": 618,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 11,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Aupaluk",
+          "autre_appellation": "",
+          "longitude": -69.600964,
+          "latitude": 59.296659,
+          "population_communaute": 232,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 12,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Kangiqsualujjuaq",
+          "autre_appellation": "",
+          "longitude": -65.945435,
+          "latitude": 58.691213,
+          "population_communaute": 1065,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 13,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Kuujjuaq",
+          "autre_appellation": "",
+          "longitude": -68.379103,
+          "latitude": 58.147649,
+          "population_communaute": 2325,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 14,
+          "id_nation": 5,
+          "nation": "Inuit",
+          "nom_communaute": "Tasiujaq",
+          "autre_appellation": "",
+          "longitude": -69.931412,
+          "latitude": 58.697635,
+          "population_communaute": 421,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 6,
+      "nation": "Kanien’kehá:ka",
+      "langue": "Kanien’kéhà",
+      "bonjour_salut": "Kwe kwe / Shé:kon",
+      "merci": "Niáwen",
+      "population_nation": 21158,
+      "nb_communautes": 3,
+      "communautes": [
+        {
+          "id_communaute": 33,
+          "id_nation": 6,
+          "nation": "Kanien’kehá:ka",
+          "nom_communaute": "Kahnawake",
+          "autre_appellation": "",
+          "longitude": -73.679466,
+          "latitude": 45.408936,
+          "population_communaute": 11898,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 34,
+          "id_nation": 6,
+          "nation": "Kanien’kehá:ka",
+          "nom_communaute": "Akwesasne",
+          "autre_appellation": "",
+          "longitude": -74.648838,
+          "latitude": 45.002316,
+          "population_communaute": 5992,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 35,
+          "id_nation": 6,
+          "nation": "Kanien’kehá:ka",
+          "nom_communaute": "Kenahsatà",
+          "autre_appellation": "",
+          "longitude": -74.123039,
+          "latitude": 45.480114,
+          "population_communaute": 3268,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 7,
+      "nation": "Crie d’Eeyou Istchee",
+      "langue": "Iiyiyuu ayimuun",
+      "bonjour_salut": "waachiyaah",
+      "merci": "miikwech",
+      "population_nation": 21728,
+      "nb_communautes": 9,
+      "communautes": [
+        {
+          "id_communaute": 15,
+          "id_nation": 7,
+          "nation": "Crie d’Eeyou Istchee",
+          "nom_communaute": "Whapmagoostui",
+          "autre_appellation": "",
+          "longitude": -77.754364,
+          "latitude": 55.279115,
+          "population_communaute": 1130,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 16,
+          "id_nation": 7,
+          "nation": "Crie d’Eeyou Istchee",
+          "nom_communaute": "Chisasibi",
+          "autre_appellation": "",
+          "longitude": -78.903122,
+          "latitude": 53.784832,
+          "population_communaute": 5322,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 17,
+          "id_nation": 7,
+          "nation": "Crie d’Eeyou Istchee",
+          "nom_communaute": "Wemindji",
+          "autre_appellation": "",
+          "longitude": -78.711869,
+          "latitude": 52.924885,
+          "population_communaute": 1719,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 18,
+          "id_nation": 7,
+          "nation": "Crie d’Eeyou Istchee",
+          "nom_communaute": "Eastmain",
+          "autre_appellation": "",
+          "longitude": -78.506927,
+          "latitude": 52.239995,
+          "population_communaute": 969,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 19,
+          "id_nation": 7,
+          "nation": "Crie d’Eeyou Istchee",
+          "nom_communaute": "Mistissini",
+          "autre_appellation": "",
+          "longitude": -73.869324,
+          "latitude": 50.418144,
+          "population_communaute": 4521,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 20,
+          "id_nation": 7,
+          "nation": "Crie d’Eeyou Istchee",
+          "nom_communaute": "Nemaska",
+          "autre_appellation": "",
+          "longitude": -76.256447,
+          "latitude": 51.688308,
+          "population_communaute": 958,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 21,
+          "id_nation": 7,
+          "nation": "Crie d’Eeyou Istchee",
+          "nom_communaute": "Waskaganish",
+          "autre_appellation": "",
+          "longitude": -78.751373,
+          "latitude": 51.477106,
+          "population_communaute": 3359,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 22,
+          "id_nation": 7,
+          "nation": "Crie d’Eeyou Istchee",
+          "nom_communaute": "Oujé-Bougoumou",
+          "autre_appellation": "",
+          "longitude": -74.817924,
+          "latitude": 49.922493,
+          "population_communaute": 1041,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 23,
+          "id_nation": 7,
+          "nation": "Crie d’Eeyou Istchee",
+          "nom_communaute": "Waswanipi",
+          "autre_appellation": "",
+          "longitude": -75.962219,
+          "latitude": 49.69695,
+          "population_communaute": 2709,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 8,
+      "nation": "Mi’gmaq",
+      "langue": "Mi’gmaq / Mi’kmaq",
+      "bonjour_salut": "Kwe / Gwe",
+      "merci": "Wela’lin",
+      "population_nation": 8264,
+      "nb_communautes": 3,
+      "communautes": [
+        {
+          "id_communaute": 43,
+          "id_nation": 8,
+          "nation": "Mi’gmaq",
+          "nom_communaute": "Listuguj",
+          "autre_appellation": "",
+          "longitude": -66.70126,
+          "latitude": 48.01519,
+          "population_communaute": 4426,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 44,
+          "id_nation": 8,
+          "nation": "Mi’gmaq",
+          "nom_communaute": "Gesgapegiag",
+          "autre_appellation": "",
+          "longitude": -65.919471,
+          "latitude": 48.19912,
+          "population_communaute": 1710,
+          "province": "Québec"
+        },
+        {
+          "id_communaute": 45,
+          "id_nation": 8,
+          "nation": "Mi’gmaq",
+          "nom_communaute": "Gespeg",
+          "autre_appellation": "",
+          "longitude": -64.560814,
+          "latitude": 48.891922,
+          "population_communaute": 2128,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 9,
+      "nation": "Naskapi / Iyuw-Iyimuun",
+      "langue": "Naskapi",
+      "bonjour_salut": "Waachiyaa",
+      "merci": "Chiniskumitin",
+      "population_nation": 1666,
+      "nb_communautes": 1,
+      "communautes": [
+        {
+          "id_communaute": 55,
+          "id_nation": 9,
+          "nation": "Naskapi / Iyuw-Iyimuun",
+          "nom_communaute": "Kawawachikamach",
+          "autre_appellation": "",
+          "longitude": -66.915986,
+          "latitude": 55.174111,
+          "population_communaute": 1666,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 10,
+      "nation": "Huronne-Wendat",
+      "langue": "Wendat",
+      "bonjour_salut": "Kwe ! Ndio !",
+      "merci": "Tiawenhk",
+      "population_nation": 5601,
+      "nb_communautes": 1,
+      "communautes": [
+        {
+          "id_communaute": 38,
+          "id_nation": 10,
+          "nation": "Huronne-Wendat",
+          "nom_communaute": "Wendake",
+          "autre_appellation": "",
+          "longitude": -71.35397,
+          "latitude": 46.858078,
+          "population_communaute": 5601,
+          "province": "Québec"
+        }
+      ]
+    },
+    {
+      "id_nation": 11,
+      "nation": "Wolastoqey",
+      "langue": "Wolastoqey Latuwewakon",
+      "bonjour_salut": "Qey !",
+      "merci": "Woliwon",
+      "population_nation": 2300,
+      "nb_communautes": 1,
+      "communautes": [
+        {
+          "id_communaute": 42,
+          "id_nation": 11,
+          "nation": "Wolastoqey",
+          "nom_communaute": "Wolastoqikik Wahsipekuk",
+          "autre_appellation": "",
+          "longitude": -69.497795,
+          "latitude": 47.918873,
+          "population_communaute": 2300,
+          "province": "Québec"
+        }
+      ]
+    }
+  ]
+}

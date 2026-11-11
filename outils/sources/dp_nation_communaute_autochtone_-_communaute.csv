@@ -1,0 +1,56 @@
+id_communaute,nation,nom_communaute,longitude,latitude,population_communaute,province
+1,Inuit,Ivujivik,-77.908859,62.412001,451,Québec
+2,Inuit,Salluit,-75.640869,62.196265,1834,Québec
+3,Inuit,Akulivik,-78.190727,60.808930,714,Québec
+4,Inuit,Puvirnituq,-77.266846,60.038789,1905,Québec
+5,Inuit,Inukjuak,-78.111763,58.453481,2084,Québec
+6,Inuit,Umiujaq,-76.545181,56.552292,553,Québec
+7,Inuit,Kuujjuaarapik,-77.755222,55.285568,787,Québec
+8,Inuit,Kangiqsujuaq,-71.952209,61.600518,926,Québec
+9,Inuit,Quaqtaq,-69.622936,61.042498,463,Québec
+10,Inuit,Kangirsuk,-70.013466,60.026013,618,Québec
+11,Inuit,Aupaluk,-69.600964,59.296659,232,Québec
+12,Inuit,Kangiqsualujjuaq,-65.945435,58.691213,1065,Québec
+13,Inuit,Kuujjuaq,-68.379103,58.147649,2325,Québec
+14,Inuit,Tasiujaq,-69.931412,58.697635,421,Québec
+15,Crie d’Eeyou Istchee,Whapmagoostui,-77.754364,55.279115,1130,Québec
+16,Crie d’Eeyou Istchee,Chisasibi,-78.903122,53.784832,5322,Québec
+17,Crie d’Eeyou Istchee,Wemindji,-78.711869,52.924885,1719,Québec
+18,Crie d’Eeyou Istchee,Eastmain,-78.506927,52.239995,969,Québec
+19,Crie d’Eeyou Istchee,Mistissini,-73.869324,50.418144,4521,Québec
+20,Crie d’Eeyou Istchee,Nemaska,-76.256447,51.688308,958,Québec
+21,Crie d’Eeyou Istchee,Waskaganish,-78.751373,51.477106,3359,Québec
+22,Crie d’Eeyou Istchee,Oujé-Bougoumou,-74.817924,49.922493,1041,Québec
+23,Crie d’Eeyou Istchee,Waswanipi,-75.962219,49.696950,2709,Québec
+24,Anishnabe,Pikogan,-78.117171,48.597785,1105,Québec
+25,Anishnabe,Simosagahiganak (Lac Simon),-77.354736,48.060873,2378,Québec
+26,Anishnabe,Timiskaming,-78.627777,48.035856,3140,Québec
+27,Anishnabe,Long Point (Winneway),-78.576965,47.580231,981,Québec
+28,Anishnabe,Kitcisakik,-77.458903,47.539434,560,Québec
+29,Anishnabe,Wolf Lake (Hunter's point),-78.793259,47.006480,302,Québec
+30,Anishnabe,Eagle Village Kipawa (Kebaowek),-78.986292,46.781196,1297,Québec
+31,Anishnabe,Barrière Lake (Lac Rapide),-76.700508,47.503254,809,Québec
+32,Anishnabe,Kitigan Zibi,-76.006379,46.361145,4346,Québec
+33,Kanien’kehá:ka,Kahnawake,-73.679466,45.408936,11898,Québec
+34,Kanien’kehá:ka,Akwesasne,-74.648838,45.002316,5992,Québec
+35,Kanien’kehá:ka,Kenahsatà,-74.123039,45.480114,3268,Québec
+36,W8banaki,Wôlinak,-72.421489,46.328232,746,Québec
+37,W8banaki,Odanak,-72.822018,46.072873,3209,Québec
+38,Huronne-Wendat,Wendake,-71.353970,46.858078,5601,Québec
+39,Atikamekw,Opitciwan,-74.938431,48.661036,3214,Québec
+40,Atikamekw,Wemotaci,-73.785102,47.902692,2155,Québec
+41,Atikamekw,Manawan,-74.387634,47.221550,3178,Québec
+42,Wolastoqey,Wolastoqikik Wahsipekuk,-69.497795,47.918873,2300,Québec
+43,Mi’gmaq,Listuguj,-66.701260,48.015190,4426,Québec
+44,Mi’gmaq,Gesgapegiag,-65.919471,48.199120,1710,Québec
+45,Mi’gmaq,Gespeg,-64.560814,48.891922,2128,Québec
+46,Innue,Ekuanitshit,-64.023128,50.291478,734,Québec
+47,Innue,Uashat mak Mani-utenam,-66.194687,50.212765,5211,Québec
+48,Innue,Nutashkuan,-61.803516,50.132545,1282,Québec
+49,Innue,Unaman-shipit,-60.660882,50.219424,1288,Québec
+50,Innue,Pakuashipi,-58.668365,51.219357,422,Québec
+51,Innue,Pessamit,-68.639832,48.943700,4283,Québec
+52,Innue,Essipit,-69.397019,48.341072,1354,Québec
+53,Innue,Mashteuiatsh,-72.230816,48.576777,12351,Québec
+54,Innue,Matimekush (Lac John),-66.784232,54.813169,1087,Québec
+55,Naskapi / Iyuw-Iyimuun,Kawawachikamach,-66.915986,55.174111,1666,Québec

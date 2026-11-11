@@ -1,0 +1,6 @@
+# Documents de travail (registre, données non validées) : jamais sur GitHub
+doc/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
