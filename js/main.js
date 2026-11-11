@@ -12,7 +12,8 @@
 
 import { loadData } from './data/dataLoader.js';
 import { dataStore } from './data/dataStore.js';
-import { initEchelles } from './utils/echelles.js';
+import { initEchelles, majEchelles } from './utils/echelles.js';
+import { cadreZone } from './utils/cadres.js';
 import { initI18n } from './utils/i18n.js';
 import { initPastilles, placerPastilles } from './layers/pastillesLayer.js';
 import { initLiens } from './layers/liensLayer.js';
@@ -38,6 +39,7 @@ function miseAJour() {
 }
 
 function recalculer() {
+  majEchelles(cadreZone('zone-c').largeur);   // la taille des cercles suit la largeur de l'écran
   calculerDispositions(DISPOSITIONS);
   miseAJour();
 }

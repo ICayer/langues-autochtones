@@ -4,7 +4,7 @@
 //
 // Rôle : Mesurer où se trouve une zone dans la page et l’espace réservé à la visualisation
 // Dépend de : aucun
-// Utilisé par : main.js, scroll/migrations.js
+// Utilisé par : main.js, layouts/, scroll/migrations.js
 //
 // 2627_langues_autochtones_Web
 // Isabel Cayer · Atelier Love & Code · 2026
@@ -27,4 +27,17 @@ export function cadreZone(idZone) {
     largeur: mobile ? svg.width - 40 : svg.width * 0.58,
     haut: mobile ? basTexte + 30 : zone.top - svg.top + 80
   };
+}
+
+// Sous cette largeur de visualisation, on passe aux dispositions « téléphone »
+const LARGEUR_ETROITE = 500;
+
+/** Vrai si la visualisation est assez étroite pour utiliser les dispositions verticales. */
+export function estEtroit(largeur) {
+  return largeur < LARGEUR_ETROITE;
+}
+
+/** Nombre de nations par rangée : une seule règle pour toutes les zones. */
+export function nationsParRangee(largeur) {
+  return estEtroit(largeur) ? 3 : 6;
 }

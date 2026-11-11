@@ -3,7 +3,7 @@
 // Disposition de la zone B
 //
 // Rôle : Calculer la position de chaque pastille : grille des nations et de leurs communautés
-// Dépend de : js/data/dataStore.js
+// Dépend de : js/data/dataStore.js, js/utils/cadres.js
 // Utilisé par : main.js, scroll/migrations.js
 //
 // 2627_langues_autochtones_Web
@@ -11,6 +11,7 @@
 // ==================================================
 
 import { dataStore } from '../data/dataStore.js';
+import { nationsParRangee as parRangee } from '../utils/cadres.js';
 
 // Tailles uniformes en zone B (B-02) : la taille selon la population arrive en zone C.
 export const RAYON_NATION = 22;
@@ -31,7 +32,7 @@ export function layoutNations({ gauche, largeur, haut }) {
   const nations = [...dataStore.nations]
     .sort((a, b) => a.nation.localeCompare(b.nation, 'fr'));
 
-  const nationsParRangee = largeur < 500 ? 3 : 6;     // 2 rangées (6 et 5) sur écran large
+  const nationsParRangee = parRangee(largeur);       // 2 rangées (6 et 5) sur écran large
   const largeurColonne = largeur / nationsParRangee;
 
   nations.forEach((nation, i) => {
