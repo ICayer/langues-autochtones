@@ -10,4 +10,16 @@
 // Isabel Cayer · Atelier Love & Code · 2026
 // ==================================================
 
-export function initEchelles() { /* à venir */ }
+import { dataStore } from '../data/dataStore.js';
+
+// Rayon du plus gros cercle (la nation la plus nombreuse) : la surface maximale (G-03)
+export const RAYON_MAX = 60;
+
+// Surface proportionnelle à la population : d3.scaleSqrt (G-03).
+// Une seule échelle pour les nations ET les communautés (G-04).
+export let rayonPopulation;
+
+export function initEchelles() {
+  const populationMax = d3.max(dataStore.nations, n => n.population_nation);
+  rayonPopulation = d3.scaleSqrt().domain([0, populationMax]).range([0, RAYON_MAX]);
+}

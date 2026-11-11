@@ -44,5 +44,8 @@ main { position: relative; }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
 }
 
+/* Zones avec visualisation : plus hautes, pour laisser le temps de lire avant chaque migration */
+#zone-b, #zone-c, #zone-d, #zone-e { min-height: 150vh; }
+
 /* Les pastilles réagissent à la souris (le SVG, lui, la laisse passer) */
 .pastille { pointer-events: auto; stroke: #fff; stroke-width: 1; }

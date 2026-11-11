@@ -4,7 +4,7 @@
 //
 // Rôle : Mesurer où se trouve une zone dans la page et l’espace réservé à la visualisation
 // Dépend de : aucun
-// Utilisé par : main.js, layouts/
+// Utilisé par : main.js, scroll/migrations.js
 //
 // 2627_langues_autochtones_Web
 // Isabel Cayer · Atelier Love & Code · 2026
@@ -17,9 +17,14 @@ export function cadreZone(idZone) {
   const zone = document.getElementById(idZone).getBoundingClientRect();
   const mobile = svg.width < 768;
 
+  // Sur téléphone, la visualisation commence sous le bloc de texte :
+  // au repos, une pastille n'est jamais sous le texte.
+  const texte = document.querySelector(`#${idZone} .texte`);
+  const basTexte = texte ? texte.getBoundingClientRect().bottom - svg.top : zone.top - svg.top;
+
   return {
-    gauche: mobile ? 20 : svg.width * 0.38,           // écran large : deux tiers de droite
+    gauche: mobile ? 20 : svg.width * 0.38,            // écran large : deux tiers de droite
     largeur: mobile ? svg.width - 40 : svg.width * 0.58,
-    haut: zone.top - svg.top + 80                       // marge sous le haut de la zone
+    haut: mobile ? basTexte + 30 : zone.top - svg.top + 80
   };
 }
