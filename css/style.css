@@ -24,10 +24,11 @@ main { position: relative; }
   pointer-events: none;      /* réactivé sur les pastilles plus tard */
 }
 
-.zone { position: relative; min-height: 100vh; padding: 2rem; box-sizing: border-box; }
+.zone { position: relative; pointer-events: none; min-height: 100vh; padding: 2rem; box-sizing: border-box; }
 
 .texte {
   position: relative;
+  pointer-events: auto;      /* les zones laissent passer la souris vers les pastilles, pas le texte */
   width: var(--largeur-texte);
   background: var(--fond-texte);
   padding: 1rem;
@@ -42,3 +43,6 @@ main { position: relative; }
   position: absolute; width: 1px; height: 1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
 }
+
+/* Les pastilles réagissent à la souris (le SVG, lui, la laisse passer) */
+.pastille { pointer-events: auto; stroke: #fff; stroke-width: 1; }
