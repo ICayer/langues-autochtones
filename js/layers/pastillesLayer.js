@@ -4,7 +4,7 @@
 //
 // Rôle : Dessiner les 11 nations et les 55 communautés, une clé par pastille, et les placer selon une disposition
 // Dépend de : js/data/dataStore.js, js/utils/colors.js
-// Utilisé par : main.js, scroll/migrations.js
+// Utilisé par : main.js
 //
 // 2627_langues_autochtones_Web
 // Isabel Cayer · Atelier Love & Code · 2026

@@ -4,7 +4,7 @@
 //
 // Rôle : Calculer la position de chaque pastille : grille des nations et de leurs communautés
 // Dépend de : js/data/dataStore.js, js/utils/cadres.js
-// Utilisé par : main.js, scroll/migrations.js
+// Utilisé par : main.js
 //
 // 2627_langues_autochtones_Web
 // Isabel Cayer · Atelier Love & Code · 2026

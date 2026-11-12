@@ -4,7 +4,7 @@
 //
 // Rôle : Placer les communautés sur la carte, à l’échelle réduite (D-05)
 // Dépend de : js/data/dataStore.js, js/utils/echelles.js
-// Utilisé par : scroll/migrations.js
+// Utilisé par : aucun fichier pour l'instant (prévu : main.js, comme les autres dispositions)
 //
 // 2627_langues_autochtones_Web
 // Isabel Cayer · Atelier Love & Code · 2026

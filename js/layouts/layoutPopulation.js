@@ -4,7 +4,7 @@
 //
 // Rôle : Nations dimensionnées selon leur population, communautés en beeswarm sur un axe des populations : horizontal sur écran large, vertical sur téléphone (C-02, C-03, C-04, C-10)
 // Dépend de : js/data/dataStore.js, js/utils/echelles.js, js/utils/cadres.js
-// Utilisé par : main.js, scroll/migrations.js
+// Utilisé par : main.js
 //
 // 2627_langues_autochtones_Web
 // Isabel Cayer · Atelier Love & Code · 2026
