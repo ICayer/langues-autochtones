@@ -34,6 +34,8 @@ main { position: relative; }
   padding: 1rem;
 }
 
+/* ATTENTION : 768px doit rester identique à TELEPHONE dans js/utils/cadres.js,
+   pour que la mise en page et les dispositions basculent en même temps. */
 @media (max-width: 768px) {
   :root { --largeur-texte: 100%; }
 }

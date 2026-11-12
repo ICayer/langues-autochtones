@@ -4,14 +4,12 @@
 //
 // Rôle : Une seule projection conique conforme de Lambert, cadrée par fitExtent
 //        dans le rectangle de la zone, partagée par la carte et les pastilles (D-08)
-// Dépend de : d3 (chargé dans index.html), js/utils/cadres.js
+// Dépend de : d3 (chargé dans index.html) ; reçoit le cadre de cadreZone()
 // Utilisé par : js/layouts/layoutTerritoire.js
 //
 // 2627_langues_autochtones_Web
 // Isabel Cayer · Atelier Love & Code · 2026
 // ==================================================
-
-import { estEtroit } from './cadres.js';
 
 // Écran large : la carte entière tient dans la hauteur de l'écran
 const PART_HAUTEUR_ECRAN = 0.85;
@@ -29,7 +27,7 @@ function lambertQuebec() {
  * @param {object} geojson - le contour à faire tenir dans le rectangle
  */
 export function calculerProjection(cadre, geojson) {
-  const { gauche, largeur, haut } = cadre;
+  const { gauche, largeur, haut, etroit } = cadre;
 
   // Proportions de la carte (hauteur / largeur), mesurées avec la même projection
   const [[x0, y0], [x1, y1]] = d3.geoPath(lambertQuebec().fitWidth(1000, geojson)).bounds(geojson);
@@ -37,7 +35,7 @@ export function calculerProjection(cadre, geojson) {
 
   // Téléphone : toute la largeur du cadre.
   // Écran large : toute la largeur, sauf si la carte dépasse 85 % de la hauteur de l'écran.
-  const hauteur = estEtroit(largeur)
+  const hauteur = etroit
     ? largeur * proportion
     : Math.min(largeur * proportion, window.innerHeight * PART_HAUTEUR_ECRAN);
 

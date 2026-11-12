@@ -10,12 +10,18 @@
 // Isabel Cayer · Atelier Love & Code · 2026
 // ==================================================
 
+// Seule décision « téléphone ou écran large » de tout le JavaScript.
+// ATTENTION : 768px doit rester identique à la requête @media de css/style.css,
+// pour que la mise en page et les dispositions basculent en même temps.
+const TELEPHONE = window.matchMedia('(max-width: 768px)');
+
 // Le SVG couvre toute la page : on mesure la position réelle de la zone
 // par rapport au SVG (Playbook FF2EplusADA §3.3 : mesurer, jamais présumer).
+/** @returns {{gauche:number, largeur:number, haut:number, etroit:boolean}} */
 export function cadreZone(idZone) {
   const svg = document.getElementById('visualisation').getBoundingClientRect();
   const zone = document.getElementById(idZone).getBoundingClientRect();
-  const mobile = svg.width < 768;
+  const mobile = TELEPHONE.matches;
 
   // Sur téléphone, la visualisation commence sous le bloc de texte :
   // au repos, une pastille n'est jamais sous le texte.
@@ -25,19 +31,12 @@ export function cadreZone(idZone) {
   return {
     gauche: mobile ? 20 : svg.width * 0.38,            // écran large : deux tiers de droite
     largeur: mobile ? svg.width - 40 : svg.width * 0.58,
-    haut: mobile ? basTexte + 30 : zone.top - svg.top + 80
+    haut: mobile ? basTexte + 30 : zone.top - svg.top + 80,
+    etroit: mobile            // les dispositions, les échelles et la projection lisent ce champ
   };
 }
 
-// Sous cette largeur de visualisation, on passe aux dispositions « téléphone »
-const LARGEUR_ETROITE = 500;
-
-/** Vrai si la visualisation est assez étroite pour utiliser les dispositions verticales. */
-export function estEtroit(largeur) {
-  return largeur < LARGEUR_ETROITE;
-}
-
 /** Nombre de nations par rangée : une seule règle pour toutes les zones. */
-export function nationsParRangee(largeur) {
-  return estEtroit(largeur) ? 3 : 6;
+export function nationsParRangee(cadre) {
+  return cadre.etroit ? 3 : 6;
 }

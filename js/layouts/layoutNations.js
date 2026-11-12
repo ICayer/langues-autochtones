@@ -22,17 +22,18 @@ const HAUTEUR_RANGEE_NATIONS = 180; // assez pour les 14 communautés inuit (5 r
 
 /**
  * Calcule la position de chaque pastille dans la zone B.
- * @param {{gauche:number, largeur:number, haut:number}} cadre - en pixels, repère du SVG
+ * @param {{gauche:number, largeur:number, haut:number, etroit:boolean}} cadre - voir cadreZone()
  * @returns {Map<string, {x:number, y:number, r:number}>} clé de pastille → position
  */
-export function layoutNations({ gauche, largeur, haut }) {
+export function layoutNations(cadre) {
+  const { gauche, largeur, haut } = cadre;
   const positions = new Map();
 
   // Ordre alphabétique (script technique, zone B)
   const nations = [...dataStore.nations]
     .sort((a, b) => a.nation.localeCompare(b.nation, 'fr'));
 
-  const nationsParRangee = parRangee(largeur);       // 2 rangées (6 et 5) sur écran large
+  const nationsParRangee = parRangee(cadre);         // 2 rangées (6 et 5) sur écran large
   const largeurColonne = largeur / nationsParRangee;
 
   nations.forEach((nation, i) => {

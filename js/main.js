@@ -41,7 +41,7 @@ function miseAJour() {
 }
 
 function recalculer() {
-  majEchelles(cadreZone('zone-c').largeur);   // la taille des cercles suit la largeur de l'écran
+  majEchelles(cadreZone('zone-c'));           // la taille des cercles suit le cadre (largeur, téléphone ou non)
   calculerDispositions(DISPOSITIONS);
   dessinerCarte();                             // même projection que la disposition de la zone D
   miseAJour();

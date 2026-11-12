@@ -24,9 +24,9 @@ export let rayonPopulation;
 
 export function initEchelles() { /* l'échelle est créée par majEchelles(), qui connaît la largeur */ }
 
-/** (Re)calcule l'échelle selon la largeur disponible, pour que le plus gros cercle tienne dans sa colonne. */
-export function majEchelles(largeur) {
-  const demiColonne = largeur / nationsParRangee(largeur) / 2;
+/** (Re)calcule l'échelle selon le cadre, pour que le plus gros cercle tienne dans sa colonne. */
+export function majEchelles(cadre) {
+  const demiColonne = cadre.largeur / nationsParRangee(cadre) / 2;
   const rayonMax = Math.min(RAYON_MAX_ECRAN_LARGE, demiColonne * PART_COLONNE_MAX);
   const populationMax = d3.max(dataStore.nations, n => n.population_nation);
   rayonPopulation = d3.scaleSqrt().domain([0, populationMax]).range([0, rayonMax]);

@@ -12,7 +12,7 @@
 
 import { dataStore } from '../data/dataStore.js';
 import { rayonPopulation } from '../utils/echelles.js';
-import { nationsParRangee as parRangee, estEtroit } from '../utils/cadres.js';
+import { nationsParRangee as parRangee } from '../utils/cadres.js';
 
 const POPULATION_MAX_AXE = 15000;
 const ESPACE_NATIONS_AXE = 80;       // écran large : entre la dernière rangée de nations et l'axe
@@ -68,9 +68,10 @@ function nationsParTaille() {
 }
 
 /** Écran large : nations en rangées, axe horizontal sous le nuage. */
-function dispositionHorizontale({ gauche, largeur, haut }, positions) {
+function dispositionHorizontale(cadre, positions) {
+  const { gauche, largeur, haut } = cadre;
   const nations = nationsParTaille();
-  const nationsParRangee = parRangee(largeur);
+  const nationsParRangee = parRangee(cadre);
   const largeurColonne = largeur / nationsParRangee;
   const rangees = d3.range(Math.ceil(nations.length / nationsParRangee))
     .map(i => nations.slice(i * nationsParRangee, (i + 1) * nationsParRangee));
@@ -135,7 +136,7 @@ function dispositionVerticale({ gauche, largeur, haut }, positions) {
 /** @returns {Map<string, {x:number, y:number, r:number}>} */
 export function layoutPopulation(cadre) {
   const positions = new Map();
-  if (estEtroit(cadre.largeur)) dispositionVerticale(cadre, positions);
+  if (cadre.etroit) dispositionVerticale(cadre, positions);
   else dispositionHorizontale(cadre, positions);
   return positions;
 }
