@@ -12,6 +12,10 @@ Ouvrir le dossier dans VS Code et lancer un serveur local (extension Live Server
 
 Remplacer les CSV de `outils/sources/`, puis lancer `python outils/nettoyage.py`.
 
+## Données
+
+Contour du Québec : [Natural Earth](https://www.naturalearthdata.com/) (Admin 1 – States, Provinces, 1:50 m), domaine public. Pour le régénérer : `python outils/carteQuebec.py` (écrit `public/data/quebec.geojson`).
+
 ## Licence
 
 Code : MIT (voir LICENSE). Textes et graphisme : à confirmer.

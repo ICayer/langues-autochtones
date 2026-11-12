@@ -18,20 +18,22 @@ import { initI18n } from './utils/i18n.js';
 import { initPastilles, placerPastilles } from './layers/pastillesLayer.js';
 import { initLiens } from './layers/liensLayer.js';
 import { initAxe } from './layers/axeLayer.js';
-import { initCarte } from './layers/carteLayer.js';
+import { initCarte, dessinerCarte } from './layers/carteLayer.js';
 import { initRoue } from './layers/roueLayer.js';
 import { initTooltip } from './components/tooltip.js';
 import { initTableauDonnees } from './components/tableauDonnees.js';
 import { initControles } from './components/controlesInterface.js';
 import { layoutNations } from './layouts/layoutNations.js';
 import { layoutPopulation } from './layouts/layoutPopulation.js';
+import { layoutTerritoire } from './layouts/layoutTerritoire.js';
 import { calculerDispositions, positionsSelonDefilement } from './scroll/migrations.js';
 import { initScroll } from './scroll/scrollInit.js';
 
 // Une disposition par zone, dans l'ordre du récit
 const DISPOSITIONS = {
   'zone-b': layoutNations,
-  'zone-c': layoutPopulation
+  'zone-c': layoutPopulation,
+  'zone-d': layoutTerritoire
 };
 
 function miseAJour() {
@@ -41,6 +43,7 @@ function miseAJour() {
 function recalculer() {
   majEchelles(cadreZone('zone-c').largeur);   // la taille des cercles suit la largeur de l'écran
   calculerDispositions(DISPOSITIONS);
+  dessinerCarte();                             // même projection que la disposition de la zone D
   miseAJour();
 }
 

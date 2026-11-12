@@ -13,5 +13,5 @@
 export const dataStore = {
   nations: [],        // 11 nations, chacune avec ses communautés
   communautes: [],    // 55 communautés (liste à plat)
-  geojson: null       // carte du Québec (à venir)
+  geojson: null       // contour du Québec (FeatureCollection, Natural Earth)
 };

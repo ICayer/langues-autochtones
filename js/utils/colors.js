@@ -14,6 +14,12 @@
 // À remplacer par la palette validée, avec un contraste suffisant.
 const PALETTE_PROVISOIRE = [...d3.schemeTableau10, '#6b6b6b'];
 
+// PROVISOIRE : fond de carte de la zone D, gris clair, trait fin
+export const COULEURS_CARTE = {
+  remplissage: '#ebebeb',
+  trait: '#d4d4d4'
+};
+
 export function couleurNation(idNation) {
   return PALETTE_PROVISOIRE[(idNation - 1) % PALETTE_PROVISOIRE.length];
 }
