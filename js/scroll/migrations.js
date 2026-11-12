@@ -4,7 +4,8 @@
 //
 // Rôle : Interpoler entre deux dispositions selon la progression du défilement,
 //        en courbe et en cascade par nation (G-02, G-08, BC-02, BC-03, BC-04) ;
-//        sous prefers-reduced-motion, fondu sur place sans déplacement (G-09)
+//        sous prefers-reduced-motion, fondu sur place sans déplacement (G-09) ;
+//        une zone peut avoir des étapes intermédiaires, traversées pendant la migration qui y arrive (E-03)
 // Dépend de : js/utils/cadres.js, js/data/dataStore.js
 // Utilisé par : main.js
 //
@@ -61,8 +62,18 @@ function calculerDelais() {
 export function calculerDispositions(fabriques) {
   ordreZones = Object.keys(fabriques);
   dispositions = {};
-  ordreZones.forEach(id => { dispositions[id] = fabriques[id](cadreZone(id)); });
+  // Une zone reçoit une fabrique, ou une liste d'étapes : [intermédiaire(s)…, repos].
+  // On range toujours une liste de dispositions ; la dernière est celle du repos.
+  ordreZones.forEach(id => {
+    const cadre = cadreZone(id);
+    dispositions[id] = [fabriques[id]].flat().map(fabrique => fabrique(cadre));
+  });
   calculerDelais();
+}
+
+/** Disposition de repos d'une zone : sa dernière étape. */
+function repos(id) {
+  return dispositions[id].at(-1);
 }
 
 /**
@@ -127,12 +138,20 @@ export function positionsSelonDefilement() {
     const rect = document.getElementById(ordreZones[i]).getBoundingClientRect();
     const progression = (repere - rect.top) / rect.height;   // 0 = haut de la zone au repère
 
-    if (progression < DEBUT_MIGRATION) return dispositions[ordreZones[i]];
+    if (progression < DEBUT_MIGRATION) return repos(ordreZones[i]);
     if (progression < 1) {
       const T = (progression - DEBUT_MIGRATION) / (1 - DEBUT_MIGRATION);
+      // Chaîne : repos de la zone i, puis chaque étape de la zone i + 1.
+      // La plage de la migration est partagée également entre les segments.
+      // Mouvement réduit (G-09) : on saute les étapes intermédiaires, un seul fondu.
+      const chaine = mouvementReduit.matches
+        ? [repos(ordreZones[i]), repos(ordreZones[i + 1])]
+        : [repos(ordreZones[i]), ...dispositions[ordreZones[i + 1]]];
+      const n = chaine.length - 1;                    // 1 segment, sauf avec des étapes
+      const k = Math.min(n - 1, Math.floor(T * n));   // segment en cours
       const migrer = mouvementReduit.matches ? fonduSurPlace : interpoler;
-      return migrer(dispositions[ordreZones[i]], dispositions[ordreZones[i + 1]], T);
+      return migrer(chaine[k], chaine[k + 1], T * n - k);
     }
   }
-  return dispositions[ordreZones[ordreZones.length - 1]];
+  return repos(ordreZones[ordreZones.length - 1]);
 }

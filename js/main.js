@@ -19,13 +19,14 @@ import { initPastilles, placerPastilles } from './layers/pastillesLayer.js';
 import { initLiens } from './layers/liensLayer.js';
 import { initAxe } from './layers/axeLayer.js';
 import { initCarte, dessinerCarte } from './layers/carteLayer.js';
-import { initRoue } from './layers/roueLayer.js';
+import { initRoue, dessinerRoue } from './layers/roueLayer.js';
 import { initTooltip } from './components/tooltip.js';
 import { initTableauDonnees } from './components/tableauDonnees.js';
 import { initControles } from './components/controlesInterface.js';
 import { layoutNations } from './layouts/layoutNations.js';
 import { layoutPopulation } from './layouts/layoutPopulation.js';
 import { layoutTerritoire } from './layouts/layoutTerritoire.js';
+import { layoutRoueCentre, layoutRoue } from './layouts/layoutRoue.js';
 import { calculerDispositions, positionsSelonDefilement } from './scroll/migrations.js';
 import { initScroll } from './scroll/scrollInit.js';
 
@@ -33,7 +34,8 @@ import { initScroll } from './scroll/scrollInit.js';
 const DISPOSITIONS = {
   'zone-b': layoutNations,
   'zone-c': layoutPopulation,
-  'zone-d': layoutTerritoire
+  'zone-d': layoutTerritoire,
+  'zone-e': [layoutRoueCentre, layoutRoue]   // deux temps : tout converge, puis chaque nation reprend sa place (E-03)
 };
 
 function miseAJour() {
@@ -44,6 +46,7 @@ function recalculer() {
   majEchelles(cadreZone('zone-c'));           // la taille des cercles suit le cadre (largeur, téléphone ou non)
   calculerDispositions(DISPOSITIONS);
   dessinerCarte();                             // même projection que la disposition de la zone D
+  dessinerRoue(cadreZone('zone-e'));           // même géométrie que la disposition de la zone E
   miseAJour();
 }
 

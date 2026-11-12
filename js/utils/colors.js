@@ -20,6 +20,11 @@ export const COULEURS_CARTE = {
   trait: '#d4d4d4'
 };
 
+// PROVISOIRE : repère de la roue (zone E), seulement pour juger les positions à l'œil
+export const COULEURS_ROUE = {
+  trait: '#c4c4c4'
+};
+
 export function couleurNation(idNation) {
   return PALETTE_PROVISOIRE[(idNation - 1) % PALETTE_PROVISOIRE.length];
 }
