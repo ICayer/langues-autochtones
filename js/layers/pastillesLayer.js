@@ -38,10 +38,14 @@ export function initPastilles() {
       .text(d => d.nom);
 }
 
-/** Place chaque pastille selon une disposition (Map clé → {x, y, r}). */
+/**
+ * Place chaque pastille selon une disposition (Map clé → {x, y, r, o?}).
+ * o (opacité) n'existe que pendant un fondu (G-09) ; 1 par défaut.
+ */
 export function placerPastilles(positions) {
   gPastilles.selectAll('circle')
     .attr('cx', d => positions.get(d.cle).x)
     .attr('cy', d => positions.get(d.cle).y)
-    .attr('r',  d => positions.get(d.cle).r);
+    .attr('r',  d => positions.get(d.cle).r)
+    .attr('opacity', d => positions.get(d.cle).o ?? 1);
 }

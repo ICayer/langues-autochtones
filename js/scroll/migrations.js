@@ -3,7 +3,8 @@
 // Migrations entre les zones
 //
 // Rôle : Interpoler entre deux dispositions selon la progression du défilement,
-//        en courbe et en cascade par nation (G-02, G-08, BC-02, BC-03, BC-04)
+//        en courbe et en cascade par nation (G-02, G-08, BC-02, BC-03, BC-04) ;
+//        sous prefers-reduced-motion, fondu sur place sans déplacement (G-09)
 // Dépend de : js/utils/cadres.js, js/data/dataStore.js
 // Utilisé par : main.js
 //
@@ -28,6 +29,15 @@ const COURBURE = 0.5;
 const DECALAGE_ENTRE_NATIONS = 0.015;
 // Les communautés partent après les nations, avec ce retard.
 const RETARD_COMMUNAUTES = 0.10;
+// Mouvement réduit (G-09) : part de la migration où les pastilles commencent
+// à s'effacer, et où elles ont fini de réapparaître. Le changement de
+// disposition se fait à 0,5, quand elles sont invisibles.
+const DEBUT_FONDU = 0.3;
+const FIN_FONDU = 0.7;
+
+// Préférence du système de la personne ; .matches est relu à chaque image,
+// donc un changement de réglage en cours de lecture est pris en compte.
+const mouvementReduit = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 let ordreZones = [];        // ex. ['zone-b', 'zone-c']
 let dispositions = {};      // id de zone → Map(clé → {x, y, r})
@@ -82,8 +92,26 @@ function interpoler(depart, arrivee, T) {
     // Un easing rendait le mouvement près de 4 fois plus rapide à son maximum (testé le 11 nov.).
     const t = tLocal;
     const { x, y } = pointSurCourbe(p, q, t);
-    resultat.set(cle, { x, y, r: p.r + (q.r - p.r) * t });   // mise à l'échelle au même rythme (BC-02)
+    resultat.set(cle, { x, y, r: p.r + (q.r - p.r) * t, o: 1 });   // mise à l'échelle au même rythme (BC-02)
   });
+  return resultat;
+}
+
+/**
+ * Mouvement réduit (G-09) : aucune pastille ne se déplace.
+ * Le départ s'efface sur place, puis l'arrivée apparaît sur place.
+ * T = 0 donne le départ (opacité 1), T = 1 donne l'arrivée (opacité 1).
+ */
+function fonduSurPlace(depart, arrivee, T) {
+  const avantMilieu = T < 0.5;
+  const disposition = avantMilieu ? depart : arrivee;
+  const o = avantMilieu
+    ? 1 - Math.min(1, Math.max(0, (T - DEBUT_FONDU) / (0.5 - DEBUT_FONDU)))
+    : Math.min(1, Math.max(0, (T - 0.5) / (FIN_FONDU - 0.5)));
+
+  // Nouvelle Map : on ne modifie jamais les dispositions calculées
+  const resultat = new Map();
+  disposition.forEach(({ x, y, r }, cle) => resultat.set(cle, { x, y, r, o }));
   return resultat;
 }
 
@@ -102,7 +130,8 @@ export function positionsSelonDefilement() {
     if (progression < DEBUT_MIGRATION) return dispositions[ordreZones[i]];
     if (progression < 1) {
       const T = (progression - DEBUT_MIGRATION) / (1 - DEBUT_MIGRATION);
-      return interpoler(dispositions[ordreZones[i]], dispositions[ordreZones[i + 1]], T);
+      const migrer = mouvementReduit.matches ? fonduSurPlace : interpoler;
+      return migrer(dispositions[ordreZones[i]], dispositions[ordreZones[i + 1]], T);
     }
   }
   return dispositions[ordreZones[ordreZones.length - 1]];
